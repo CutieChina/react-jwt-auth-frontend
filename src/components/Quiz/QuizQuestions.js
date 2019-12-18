@@ -1,3 +1,5 @@
+import React from 'react'
+
 var quizQuestions = [
     {
         question: "If you were trapped on an island, would you rather resort to cannibalism or die of starvation?",

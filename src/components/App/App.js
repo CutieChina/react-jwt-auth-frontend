@@ -14,6 +14,7 @@ import Profile from '../Profile/Profile'
 import './App.css'
 import Home from '../Home/Home'
 import Bot from '../Bot/Bot'
+import MainQuiz from '../Quiz/MainQuiz'
 // import Board from '../Board/Board'
 
 
@@ -211,6 +212,13 @@ class App extends Component {
               render={(props) => {
                 return (
                   <Bot isLoggedIn={this.state.isLoggedIn} user={this.state.user} />
+                )
+              }}
+            />
+            <Route path='/mainquiz'
+              render={(props) => {
+                return (
+                  <MainQuiz isLoggedIn={this.state.isLoggedIn} user={this.state.user} />
                 )
               }}
             />

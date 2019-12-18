@@ -27,3 +27,8 @@
     margin: 0;
     background-color: black;
 }
+
+blockquote {
+    background-color: black;
+    color: azure;
+  }

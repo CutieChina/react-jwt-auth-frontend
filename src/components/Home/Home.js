@@ -10,9 +10,9 @@ class Home extends React.Component {
         document.body.style.backgroundImage = "url('https://i.pinimg.com/originals/11/3b/40/113b40e515fdf3326d78c5a9bafce7cc.gif')"
         return(
     <div>
-        {JSON.parse(window.localStorage.user).email}
         <TTT />
         <h1 className='title'> Pl&nabla;y With M&exist;</h1>
+        <blockquote>&nabla; WARNING: IF YOU ARE SCARED OF THE PARANORMAL, HAVE CHANCES OF PTSD FROM ANY HORRIFIC EVENTS, AND/OR PSYCHOLOGICALLY UNFIT FOR HORROR *PLEASE DO NOT CLICK PLAY NOR CONTINUE ON THIS SITE* &nabla;</blockquote>
        
     </div>
         )
