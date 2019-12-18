@@ -1,0 +1,29 @@
+.dxLDcg {
+    background: #000000;
+    border-radius: 10px;
+    box-shadow: 0 12px 24px 0 rgba(0,0,0,0.15);
+    font-family: Helvetica Neue;
+    overflow: hidden;
+    position: relative;
+    bottom: initial;
+    top: initial;
+    right: initial;
+    left: initial;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 999;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: bottom right;
+    -ms-transform-origin: bottom right;
+    transform-origin: bottom right;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+.botbody {
+    margin: 0;
+    background-color: black;
+}

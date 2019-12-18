@@ -12,19 +12,31 @@ import LogInForm from '../LogInForm/LogInForm'
 import LogOut from '../LogOut/LogOut'
 import Profile from '../Profile/Profile'
 import './App.css'
+import Home from '../Home/Home'
+import Bot from '../Bot/Bot'
+// import Board from '../Board/Board'
+
 
 const databaseUrl = process.env.NODE_ENV === 'production' ? process.env.BACKEND_APP_URL : 'http://localhost:3000'
 
 class App extends Component {
-  state = {
-    email: '',
-    password: '',
-    isLoggedIn: false,
-    user: null
+  constructor(){
+    super()
+    this.state = {
+      email: '',
+      password: '',
+      isLoggedIn: false,
+      user: null
+    }
   }
 
   componentDidMount() {
     if (localStorage.token) {
+      if (localStorage.user) {
+        this.setState({
+          user: JSON.parse(localStorage.user)
+        })
+      }
       this.setState({
         isLoggedIn: true
       })
@@ -110,6 +122,7 @@ class App extends Component {
       .then(response => {
         console.log(response)
         window.localStorage.setItem('token', response.data.token)
+        window.localStorage.setItem('user', JSON.stringify(response.data.user))
         this.setState({
           isLoggedIn: true,
           user: response.data.user,
@@ -125,12 +138,54 @@ class App extends Component {
       .catch(err => console.log(err))
   }
 
+  // handleLogIn = (e) => {
+  //   e.preventDefault()
+  //   let loginUser = {
+  //     email: this.state.email,
+  //     password: this.state.password
+  //   }
+  //   axios(
+  //     {
+  //       method: 'post',
+  //       url: `${databaseUrl}/api/users/login`,
+  //       data: loginUser
+  //     })
+  //     .then(response => {
+  //       console.log(response)
+  //       window.localStorage.setItem('token', response.data.token)
+  //       this.setState({
+  //         isLoggedIn: true,
+  //         user: response.data.user,
+  //         email: '',
+  //         password: ''
+  //       })
+  //       const location = {
+  //         pathname: '/board',
+  //         state: { fromDashboard: true }
+  //       }
+  //       this.props.history.replace(location)
+  //     })
+  //     .catch(err => console.log(err))
+  // }
+
+  updateUser = (update) => {
+    console.log('UPDATE USER', update);
+  }
+  
+
   render() {
     return (
       <div>
         <NavBar isLoggedIn={this.state.isLoggedIn} user={this.state.user} />
         <div className='body'>
           <Switch>
+            <Route path='/home'
+              render={(props) => {
+                return (
+                  <Home />
+                )
+              }}
+            />
             <Route path='/signup'
               render={(props) => {
                 return (
@@ -152,13 +207,27 @@ class App extends Component {
                 )
               }}
             />
-            <Route path='/profile'
+            <Route path='/bot'
               render={(props) => {
                 return (
-                  <Profile isLoggedIn={this.state.isLoggedIn} user={this.state.user} />
+                  <Bot isLoggedIn={this.state.isLoggedIn} user={this.state.user} />
                 )
               }}
             />
+            <Route path='/profile'
+              render={(props) => {
+                return (
+                  <Profile isLoggedIn={this.state.isLoggedIn} user={this.state.user} updateUser={() => this.updateUser()}/>
+                )
+              }}
+            />
+            {/* <Route path='/board'
+              render={(props) => {
+                return (
+                  <Board isLoggedIn={this.state.isLoggedIn} user={this.state.user} />
+                )
+              }}
+            /> */}
           </Switch>
         </div>
       </div>

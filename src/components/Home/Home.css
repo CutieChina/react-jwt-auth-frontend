@@ -1,0 +1,20 @@
+.title {
+        color: transparent;
+        text-shadow: 0 0 5px rgba(0,0,0,0.5);
+        font-family: 'Chalkduster', 'fantasy';
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 60px;
+        
+        position: absolute;
+        left: 50%;
+        top: 35%;
+        margin-left: -180px;
+        
+        -webkit-animation: horror-animation 5s infinite;
+        -moz-animation: horror-animation 5s infinite;
+        -o-animation: horror-animation 5s infinite;
+        animation: horror-animation 5s infinite;
+}
+      
+  

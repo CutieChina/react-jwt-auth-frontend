@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 
+
 import './LogInForm.css'
 
 class LogInForm extends Component {
   render () {
+    document.body.style.backgroundImage = ("url('https://images2.minutemediacdn.com/image/upload/c_crop,h_674,w_1200,x_0,y_113/f_auto,q_auto,w_1100/v1554999553/shape/mentalfloss/504605-publicdomain.gif')")
+
     return (
       <div>
-        <h2>Log In</h2>
+        <h2 className='login'>Log In</h2>
 
         <form>
           <div>
