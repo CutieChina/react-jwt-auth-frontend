@@ -104,7 +104,7 @@ class MainQuiz extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h2>Messiah Quiz</h2>
+          <h2 className='messiah'>Messiah Quiz</h2>
         </div>
         {this.state.result ? this.renderResult() : this.renderQuiz()}
       </div>

@@ -21,6 +21,7 @@ class SignUpForm extends Component {
           </div>
           <input value='Submit' type='submit' onClick={this.props.handleSignUp} />
         </form>
+        <blockquote>&nabla; WARNING: IF YOU ARE SCARED OF THE PARANORMAL, HAVE CHANCES OF PTSD FROM ANY HORRIFIC EVENTS, AND/OR PSYCHOLOGICALLY UNFIT FOR HORROR *PLEASE DO NOT CONTINUE ON THIS SITE* &nabla;</blockquote>
       </div>
     )
   }

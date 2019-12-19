@@ -89,11 +89,73 @@ class Bot extends Component {
         {
           id: '10',
           message: " ∀ND D∅∏'T THI∏K T∅ ∅FT∃∏, J∇ST D∅ ∃X∀CTLY ∀S Y∅U'R∃ T∅ΓD",
-          end:true
+          trigger:'11'
         },
-
-
-
+        {
+          id: '11',
+          message: " ∀ND D∅∏'T THI∏K T∅ ∅FT∃∏, J∇ST D∅ ∃X∀CTLY ∀S Y∅U'R∃ T∅ΓD",
+          trigger: '12'
+        },
+        {
+          id: '12',
+          message: " ∀ND D∅∏'T THI∏K T∅ ∅FT∃∏, J∇ST D∅ ∃X∀CTLY ∀S Y∅U'R∃ T∅ΓD",
+          trigger: '13'
+        },
+        {
+          id: '13',
+          message: " ∀ND D∅∏'T THI∏K T∅ ∅FT∃∏, J∇ST D∅ ∃X∀CTLY ∀S Y∅U'R∃ T∅ΓD",
+          trigger: '14'
+        },
+        {
+          id: '14',
+          message: " ∀ND D∅∏'T THI∏K T∅ ∅FT∃∏, J∇ST D∅ ∃X∀CTLY ∀S Y∅U'R∃ T∅ΓD",
+          trigger: '15'
+        },
+        {
+          id: '15',
+          message: " ∀ND D∅∏'T THI∏K T∅ ∅FT∃∏, J∇ST D∅ ∃X∀CTLY ∀S Y∅U'R∃ T∅ΓD",
+          trigger: '16'
+        },
+        {
+          id: '16',
+          message: " ∀ND D∅∏'T THI∏K T∅ ∅FT∃∏, J∇ST D∅ ∃X∀CTLY ∀S Y∅U'R∃ T∅ΓD",
+          trigger: '17'
+        },
+        {
+          id: '17',
+          message: "J∇ST D∅ ∃X∀CTLY ∀S Y∅U'R∃ T∅ΓD",
+          trigger: '18'
+        },
+        {
+          id: '18',
+          message: "J∇ST D∅ ∃X∀CTLY ∀S Y∅U'R∃ T∅ΓD",
+          trigger: '19'
+        },
+        {
+          id: '19',
+          message: "J∇ST D∅ ∃X∀CTLY ∀S Y∅U'R∃ T∅ΓD",
+          trigger: '20'
+        },
+        {
+          id: '20',
+          message: "J∇ST D∅ ∃X∀CTLY ∀S Y∅U'R∃ T∅ΓD",
+          trigger: '21'
+        },
+        {
+          id: '21',
+          message: "J∇ST D∅ ∃X∀CTLY ∀S Y∅U'R∃ T∅ΓD",
+          trigger: '22'
+        },
+        {
+          id: '22',
+          message: "J∇ST D∅ ∃X∀CTLY ∀S Y∅U'R∃ T∅ΓD",
+          trigger: '23'
+        },
+        {
+          id: '23',
+          message: "J∇ST D∅ ∃X∀CTLY ∀S Y∅U'R∃ T∅ΓD",
+          end: true
+        },
         ];
         
 
@@ -108,7 +170,7 @@ class Bot extends Component {
         />
         </ThemeProvider>
             {/* </div> */}
-            <blockquote>&nabla; WARNING: IF YOU ARE SCARED OF THE PARANORMAL, HAVE CHANCES OF PTSD FROM ANY HORRIFIC EVENTS, AND/OR PSYCHOLOGICALLY UNFIT FOR HORROR *PLEASE DO NOT CLICK PLAY NOR CONTINUE ON THIS SITE* &nabla;</blockquote>
+            <blockquote>&nabla; WARNING: IF YOU ARE SCARED OF THE PARANORMAL, HAVE CHANCES OF PTSD FROM ANY HORRIFIC EVENTS, AND/OR PSYCHOLOGICALLY UNFIT FOR HORROR *PLEASE DO NOT CONTINUE ON THIS SITE* &nabla;</blockquote>
         </div>
         )
     }

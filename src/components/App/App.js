@@ -16,6 +16,7 @@ import Home from '../Home/Home'
 import Bot from '../Bot/Bot'
 import MainQuiz from '../Quiz/MainQuiz'
 // import Board from '../Board/Board'
+import Forums from '../Forum/Forums'
 
 
 const databaseUrl = process.env.NODE_ENV === 'production' ? process.env.BACKEND_APP_URL : 'http://localhost:3000'
@@ -139,6 +140,24 @@ class App extends Component {
       .catch(err => console.log(err))
   }
 
+  //update user
+  updateUser = e => {
+    e.preventDefault();
+    console.log('update user')
+    let id = this.state.user.id;
+    axios({
+      url: `https://localhost:3000/api/users/${id}`,
+      method: "put",
+      data: { updateUser: this.state.updateUser }
+    }).then(response => {
+      this.setState(prevState => ({
+        updateUser: [...prevState.updateUser, response.data.updateUser]
+      }));
+    });
+    console.log('logout')
+    this.handleLogOut()
+  };
+
   // handleLogIn = (e) => {
   //   e.preventDefault()
   //   let loginUser = {
@@ -222,10 +241,18 @@ class App extends Component {
                 )
               }}
             />
+             <Route path='/forums'
+              render={(props) => {
+                return (
+                  <Forums isLoggedIn={this.state.isLoggedIn} user={this.state.user} />
+                )
+              }}
+            />
             <Route path='/profile'
               render={(props) => {
                 return (
-                  <Profile isLoggedIn={this.state.isLoggedIn} user={this.state.user} updateUser={() => this.updateUser()}/>
+                  // <Profile isLoggedIn={this.state.isLoggedIn} user={this.state.user} updateUser={() => this.updateUser()}/>
+                  <Profile isLoggedIn={this.state.isLoggedIn} user={this.state.user} updateUser={this.updateUser}/>
                 )
               }}
             />

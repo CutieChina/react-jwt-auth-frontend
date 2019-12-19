@@ -26,9 +26,9 @@ class DisplayThreadList extends React.Component {
         })
       })
   }
-  componentDidMount() {
-    this.getThreadList(this.props.forumName[1])
-  }
+  // componentDidMount() {
+  //   this.getThreadList(this.props.forumName[1])
+  // }
   render() {
     let threadList = this.state.threadsArray.map((thread) => {
       let threadUrl = `../show-thread/${thread.id}`

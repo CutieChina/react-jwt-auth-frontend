@@ -5,6 +5,7 @@ import './LogInForm.css'
 
 class LogInForm extends Component {
   render () {
+
     document.body.style.backgroundImage = ("url('https://images2.minutemediacdn.com/image/upload/c_crop,h_674,w_1200,x_0,y_113/f_auto,q_auto,w_1100/v1554999553/shape/mentalfloss/504605-publicdomain.gif')")
 
     return (
@@ -22,6 +23,7 @@ class LogInForm extends Component {
           </div>
           <input value='Submit' type='submit' onClick={this.props.handleLogIn} />
         </form>
+        <blockquote>&nabla; WARNING: IF YOU ARE SCARED OF THE PARANORMAL, HAVE CHANCES OF PTSD FROM ANY HORRIFIC EVENTS, AND/OR PSYCHOLOGICALLY UNFIT FOR HORROR *PLEASE DO NOT CONTINUE ON THIS SITE* &nabla;</blockquote>
       </div>
     )
   }
