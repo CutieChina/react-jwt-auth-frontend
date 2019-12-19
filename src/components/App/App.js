@@ -140,24 +140,6 @@ class App extends Component {
       .catch(err => console.log(err))
   }
 
-  //update user
-  updateUser = e => {
-    e.preventDefault();
-    console.log('update user')
-    let id = this.state.user.id;
-    axios({
-      url: `https://localhost:3000/api/users/${id}`,
-      method: "put",
-      data: { updateUser: this.state.updateUser }
-    }).then(response => {
-      this.setState(prevState => ({
-        updateUser: [...prevState.updateUser, response.data.updateUser]
-      }));
-    });
-    console.log('logout')
-    this.handleLogOut()
-  };
-
   // handleLogIn = (e) => {
   //   e.preventDefault()
   //   let loginUser = {
@@ -190,9 +172,17 @@ class App extends Component {
 
   updateUser = (update) => {
     console.log('UPDATE USER', update);
+    let id = this.state.user.id;
+    axios.put(`${databaseUrl}/api/users/${id}`, update)
+    .then(response => {
+      console.log(response)
+      this.setState({
+        user: response
+      })
+      window.localStorage.setItem('user', JSON.stringify(response.data.user))
+    });
   }
   
-
   render() {
     return (
       <div>

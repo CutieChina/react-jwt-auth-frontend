@@ -11,7 +11,7 @@ class NavBar extends Component {
       navBarItems.push(<NavItem key={2} href='/bot'>Chat</NavItem>)
       navBarItems.push(<NavItem key={4} href='/mainquiz'>Quiz</NavItem>)
       navBarItems.push(<NavItem key={3} href='/forums'>Forum</NavItem>)
-      navBarItems.push(<NavItem key={3} href='/logout'>Log Out</NavItem>)
+      navBarItems.push(<NavItem key={8} href='/logout'>Log Out</NavItem>)
       
       
       

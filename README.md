@@ -46,7 +46,9 @@ The app also have many more features like the game where two players can play ag
 <h1>Future ideas</h1>
 
 Adding more than one game
+
 Users to be able to change their password or email or userName
+
 Users to be able to save a story from the form
 
 <h1>Technologies Used</h1>

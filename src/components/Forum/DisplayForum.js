@@ -1,5 +1,4 @@
 import React from 'react';
-import MakeThread from './MakeThread';
 import DisplayThreadList from './DisplayThreadList';
 import DisplayThread from './DisplayThread';
 const databaseUrl = 'http://localhost:3000'

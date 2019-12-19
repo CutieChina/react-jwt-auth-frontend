@@ -3,7 +3,7 @@ import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
 import axios from 'axios';
 import DisplayForum from '../Forum/DisplayForum'
 import DisplayMessage from '../Forum/DisplayMessage'
-import DisplayThread from '../Forum/DisplayThread'
+// import DisplayThread from '../Forum/DisplayThread'
 import DisplayThreadList from '../Forum/DisplayThreadList'
 import MakeMessage from '../Forum/MakeMessage'
 // import MakeThread from '../Forum/MakeThread'

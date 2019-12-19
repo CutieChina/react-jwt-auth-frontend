@@ -3,7 +3,7 @@ import './Profile.css'
 
 class Profile extends Component {
   state = {
-    email: '',
+    email: null,
   }
 
   setUserInfo() {
@@ -17,12 +17,13 @@ class Profile extends Component {
     })
   }
 
-  // updateUser() {
-  //   let update = {
-  //     email: this.state.email
-  //   }
-  //   this.props.updateUser(update)
-  // }
+  updateUser = (e) => {
+    e.preventDefault();
+    let update = {
+      email: this.state.email
+    }
+    this.props.updateUser(update)
+  }
 
   render() {
     document.body.style.backgroundImage = "url('https://thumbs.gfycat.com/CaninePassionateDiscus-max-1mb.gif')"
@@ -39,13 +40,13 @@ class Profile extends Component {
 
           <br></br>
 
-          <form>
+          <form onSubmit={this.updateUser}>
             <h5>Submit this form to update your profile</h5>
             <div>
               {/* <label htmlFor='email'>New Email</label> */}
-              <input type='text' name='email' onChange={this.handleInput} placeholder='New Email'/>
+              <input type='email' name='email' onChange={this.handleInput} placeholder='New Email' required/>
             </div>
-            <button onClick={console.log(this.props.updateUser)}>Update Profile</button>
+            <button type="submit">Update Profile</button>
           </form>
         </div>
       )
