@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { Container, Button, Card, Accordion, InputGroup, FormControl, Form } from 'react-bootstrap';
+import {  Button, InputGroup, FormControl} from 'react-bootstrap';
 // import { BrowserRouter as Router, Switch, Route, Link, } from "react-router-dom";
 const databaseUrl = 'http://localhost:3000'
 
@@ -31,7 +31,7 @@ createMessage = (e) => {
     return (
       <div className="ComponentBorder">
         <div className="App">
-          <h1>Create Story</h1>
+          <h1>Tell Your Secret</h1>
           <form onSubmit={e => this.createMessage(e)}>
             <InputGroup size="lg" id="messages"
               // name={this.state.thread.id}

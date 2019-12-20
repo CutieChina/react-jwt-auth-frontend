@@ -18,9 +18,9 @@ const theme = {
   };
 
 class Bot extends Component {
-    constructor() {
-        super()
-    }
+    // constructor() {
+    //     super()
+    // }
 
     render() {
       document.body.style.backgroundImage = ("url('https://thumbs.gfycat.com/SkinnyHandmadeCobra-small.gif')")

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
 import DisplayForum from '../Forum/DisplayForum'
 import DisplayMessage from '../Forum/DisplayMessage'
 // import DisplayThread from '../Forum/DisplayThread'
-import DisplayThreadList from '../Forum/DisplayThreadList'
+// import DisplayThreadList from '../Forum/DisplayThreadList'
 import MakeMessage from '../Forum/MakeMessage'
 // import MakeThread from '../Forum/MakeThread'
 const databaseUrl = 'http://localhost:3000'
@@ -34,7 +34,7 @@ class Forums extends Component {
         }
         newThread.forum = this.props.newPath
         // newThread.forum = this.props.location.pathname
-        let newLocation = newThread.forum
+        // let newLocation = newThread.forum
         // let newPath = newLocation.slice(8);
         this.setState(prevState => (
             { newThread: { ...prevState.newThread, ...newThread } }
@@ -69,23 +69,9 @@ class Forums extends Component {
                     <a href="/" className="btn btn-home" role="link" aria-pressed="true">MESSIAH</a>
                 </Row>
                 <Row className="forum-title" >
-                    <h2>{this.props.forumName} Forum</h2>
+                    <h2>{this.props.forumName} Anonymous</h2>
                 </Row>
                 <Row>
-                    {/* <Col>
-                        <Form sm={2} style={{ width: '40rem' }} onChange={this.handleChange}>
-                            <Form.Group controlId="formBasicUsername">
-                                <Form.Label>start a conversation</Form.Label>
-                                <Form.Control type="text" placeholder="username" name='username' />
-                            </Form.Group>
-                            <Form.Group controlId="formBasicThread">
-                                <Form.Control type="text" placeholder="thread title" name='subject' />
-                            </Form.Group>
-                            <Button onClick={this.showThread} variant="primary" type="submit">
-                                Submit
-                         </Button>
-                        </Form>
-                    </Col> */}
                     <Col>
                         <Container className="side-bar">
                            
