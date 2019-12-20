@@ -39,9 +39,9 @@ The app also have many more features like the game where two players can play ag
 10. as a registered user I want to be able to text with the story teller (bot) so that I can customize my texts.
 
 ## Wireframe
-![](./Wireframe/IMG_0207.JPG)
-![](./Wireframe/IMG_2286.JPG)
-![](./Wireframe/IMG_8185.JPG)
+![](./wireframe1.JPG)
+![](./Wireframe2.JPG)
+![](./Wireframe3.JPG)
 
 <h1>Future ideas</h1>
 
